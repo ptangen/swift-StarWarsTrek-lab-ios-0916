@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,12 +19,158 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Star Wars" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMs-uE-xHs">
+                                <frame key="frameInset" minX="119" minY="20" width="200" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Star Trek" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YdJ-Q3-EG9">
+                                <frame key="frameInset" minX="137" minY="378" width="133" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yJe-lm-uLo" userLabel="star wars scroll view">
+                                <frame key="frameInset" minX="75" minY="61" width="225" height="235.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eb0-Hf-pjz">
+                                        <rect key="frame" x="8" y="8" width="768" height="256"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="O3w-8h-xPY">
+                                                <frame key="frameInset" width="768" height="256"/>
+                                                <subviews>
+                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="AnakinJedi" translatesAutoresizingMaskIntoConstraints="NO" id="9ux-Xi-Kex">
+                                                        <frame key="frameInset" width="256" height="256"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Chewbacca" translatesAutoresizingMaskIntoConstraints="NO" id="g16-ug-8I0">
+                                                        <frame key="frameInset" minX="256" width="256" height="256"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="HanSolo" translatesAutoresizingMaskIntoConstraints="NO" id="ELt-iO-aJL">
+                                                        <frame key="frameInset" minX="512" width="256" height="256"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </stackView>
+                                </subviews>
+                            </scrollView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVr-Du-M82" userLabel="star trek scroll view">
+                                <frame key="frameInset" minX="82" minY="441" width="218" height="206"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="byy-0l-P63">
+                                        <rect key="frame" x="7" y="-36" width="2400" height="600"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="J1d-Aj-1lr">
+                                                <frame key="frameInset" width="2400" height="600"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="CaptainKirk" translatesAutoresizingMaskIntoConstraints="NO" id="Om1-kZ-8Xe">
+                                                        <frame key="frameInset" width="600" height="600"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="DrMcCoy" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-rH-UHn">
+                                                        <frame key="frameInset" minX="600" width="600" height="600"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Spock" translatesAutoresizingMaskIntoConstraints="NO" id="ycY-vp-l5D">
+                                                        <frame key="frameInset" minX="1200" width="600" height="600"/>
+                                                    </imageView>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Uhuru" translatesAutoresizingMaskIntoConstraints="NO" id="TkZ-j4-vPh">
+                                                        <frame key="frameInset" minX="1800" width="600" height="600"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkD-ta-br2">
+                                <frame key="frameInset" minX="278" minY="362" width="81" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="NextButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U1v-Bu-HEv"/>
+                                    <segue destination="BS8-np-u0q" kind="show" identifier="showDetail" id="aLz-Xy-SjH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="Anakin" destination="9ux-Xi-Kex" id="Sbf-QA-DzI"/>
+                        <outlet property="Chewbacca" destination="g16-ug-8I0" id="9aJ-99-ZGa"/>
+                        <outlet property="HanSolo" destination="ELt-iO-aJL" id="yGs-vn-4Pa"/>
+                        <outlet property="starTrekLabel" destination="YdJ-Q3-EG9" id="ox9-sE-fZl"/>
+                        <outlet property="starTrekScrollView" destination="gVr-Du-M82" id="dpd-6z-841"/>
+                        <outlet property="starTrekStackView" destination="J1d-Aj-1lr" id="ZgL-bX-iqs"/>
+                        <outlet property="starWarsLabel" destination="QMs-uE-xHs" id="bA4-ta-fNy"/>
+                        <outlet property="starWarsScrollView" destination="yJe-lm-uLo" id="r7V-Nu-C59"/>
+                        <outlet property="starWarsStackView" destination="eb0-Hf-pjz" id="48T-zZ-xQr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127" y="135"/>
+            <point key="canvasLocation" x="125.59999999999999" y="134.48275862068968"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="Vzv-zB-jKc">
+            <objects>
+                <viewController id="BS8-np-u0q" customClass="detailViewController" customModule="StarWarTrek" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JT0-o4-Rkp"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sg3-ss-GeE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ng8-aD-4YD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Uhuru" translatesAutoresizingMaskIntoConstraints="NO" id="I9a-TC-IyR">
+                                <frame key="frameInset" minX="67" minY="101" width="240" height="231"/>
+                            </imageView>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="LukeSkywalker" translatesAutoresizingMaskIntoConstraints="NO" id="cdw-Qo-HFu">
+                                <frame key="frameInset" minX="67" minY="412" width="240" height="194"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83137254900000002" green="0.20392156859999999" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="I9a-TC-IyR" secondAttribute="leading" constant="50" id="39Q-JH-cT5"/>
+                            <constraint firstItem="I9a-TC-IyR" firstAttribute="height" secondItem="ng8-aD-4YD" secondAttribute="height" multiplier="0.3" id="3vG-X7-JmY"/>
+                            <constraint firstItem="cdw-Qo-HFu" firstAttribute="top" secondItem="I9a-TC-IyR" secondAttribute="bottom" constant="50" id="8Hn-G3-TrE"/>
+                            <constraint firstItem="cdw-Qo-HFu" firstAttribute="height" secondItem="I9a-TC-IyR" secondAttribute="height" id="AXg-5T-7cC"/>
+                            <constraint firstItem="cdw-Qo-HFu" firstAttribute="width" secondItem="I9a-TC-IyR" secondAttribute="width" id="dYh-4f-ePr"/>
+                            <constraint firstItem="cdw-Qo-HFu" firstAttribute="leading" secondItem="I9a-TC-IyR" secondAttribute="leading" id="daa-K2-fmr"/>
+                            <constraint firstItem="I9a-TC-IyR" firstAttribute="leading" secondItem="ng8-aD-4YD" secondAttribute="leadingMargin" constant="51" id="lei-bR-IXq"/>
+                            <constraint firstItem="I9a-TC-IyR" firstAttribute="top" secondItem="JT0-o4-Rkp" secondAttribute="bottom" constant="80" id="mMN-Rv-Mxp"/>
+                            <constraint firstItem="I9a-TC-IyR" firstAttribute="width" secondItem="ng8-aD-4YD" secondAttribute="width" multiplier="0.6" id="zDc-g9-BbC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lowerImage" destination="cdw-Qo-HFu" id="tm2-LQ-4xl"/>
+                        <outlet property="topImage" destination="I9a-TC-IyR" id="5GI-ds-BY8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nv4-W7-UJm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="872.79999999999995" y="134.48275862068968"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AnakinJedi" width="256" height="256"/>
+        <image name="CaptainKirk" width="600" height="600"/>
+        <image name="Chewbacca" width="256" height="256"/>
+        <image name="DrMcCoy" width="284" height="269"/>
+        <image name="HanSolo" width="256" height="256"/>
+        <image name="LukeSkywalker" width="256" height="256"/>
+        <image name="Spock" width="600" height="600"/>
+        <image name="Uhuru" width="286" height="384"/>
+    </resources>
 </document>
